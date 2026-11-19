@@ -33,7 +33,7 @@ async function fakeN8n({ gmail = true } = {}) {
       res.end(JSON.stringify(data));
     };
     const wf = /\/workflows\/([^/]+)(?:\/(activate|deactivate))?$/.exec(url.pathname);
-    if (route === "GET /credentials") return send(200, { data: state.credentials.map(({ data, ...c }) => c), nextCursor: null });
+    if (route === "GET /credentials") return send(200, { data: state.credentials.map(({ data: _data, ...c }) => c), nextCursor: null });
     if (route === "POST /credentials") {
       const c = { id: `c${state.nextId++}`, ...body };
       state.credentials.push(c);

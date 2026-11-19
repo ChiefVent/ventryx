@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteShell } from "@/components/site/shell";
-import { TelegramDemo } from "@/components/site/telegram-demo";
+import { InvoiceDemo } from "@/components/site/invoice-demo";
 
 export const Route = createFileRoute("/tradesmate")({ component: TradesMatePage });
 
@@ -44,8 +44,8 @@ function TradesMatePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-xl px-4 pb-8 sm:px-6">
-        <TelegramDemo />
+      <section className="mx-auto max-w-6xl px-4 pb-8 pt-6 sm:px-6">
+        <InvoiceDemo />
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
