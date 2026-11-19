@@ -1,0 +1,40 @@
+{
+  "client": {
+    "id": "example-electrical",
+    "businessName": "Example Electrical",
+    "ownerName": "Sean Example",
+    "trade": "Electrician",
+    "serviceArea": "Dublin and surrounding areas",
+    "timezone": "Europe/Dublin"
+  },
+  "n8n": {
+    "baseUrl": "https://example.app.n8n.cloud",
+    "apiKeyEnv": "N8N_API_KEY"
+  },
+  "llm": { "model": "claude-sonnet-4-6" },
+  "alerts": { "via": "email", "email": "alerts@example.com" },
+  "credentials": {
+    "gmail": { "name": "Example Electrical Gmail" },
+    "anthropic": { "name": "Example Electrical Anthropic", "env": { "apiKey": "EXAMPLE_ANTHROPIC_KEY" } },
+    "twilio": {
+      "name": "Example Electrical Twilio",
+      "env": { "accountSid": "EXAMPLE_TWILIO_SID", "authToken": "EXAMPLE_TWILIO_TOKEN" }
+    },
+    "webhook": {
+      "name": "Example Electrical Webhook",
+      "env": { "user": "EXAMPLE_WEBHOOK_USER", "password": "EXAMPLE_WEBHOOK_PASSWORD" }
+    }
+  },
+  "solutions": {
+    "quoteChase": { "enabled": true, "active": false, "hour": 8, "maxChases": 2 },
+    "emailDrafts": { "enabled": true, "active": false, "pollMinutes": 15 },
+    "missedCalls": {
+      "enabled": true,
+      "active": false,
+      "approvalPhone": "+353850000000",
+      "twilioFromNumber": "+353760000000",
+      "dataTableId": "REPLACE_WITH_TABLE_ID",
+      "emergencyKeywords": "sparking, burning smell, smoke from sockets or the fuse board, electric shock, exposed or live wires, total power cut"
+    }
+  }
+}
